@@ -8,7 +8,7 @@ GitHub Actions 每天 UTC 02:00（台北 10:00）运行，也可在 Actions 页�
 2. 在仓库 Settings → Secrets and variables → Actions 添加 `NEOCLOUD_SYNC_TOKEN`，值与 Portal 该接口的专用密钥一致。只授权此观察台增量写入，不放入通用 Cloudflare 凭据或 GitHub 写入令牌。
 3. 配置密钥后再推送工作流，或在 Actions 中运行 **Neocloud daily collection**。成功或部分成功会在步骤摘要显示来源状态、日期和保存的 revision；完全失败则任务失败。
 
-工作流的 `GITHUB_TOKEN` 仅 `contents: read`，checkout 不保存凭据。不需要安装 npm 包。手工运行需要 Node.js 22，并通过环境变量提供专用密钥：
+采集 job 的 `GITHUB_TOKEN` 仅 `contents: read`，checkout 不保存凭据。不需要安装 npm 包。手工运行需要 Node.js 22，并通过环境变量提供专用密钥：
 
 ```sh
 node --experimental-strip-types --test collector/sync.test.mjs
@@ -26,3 +26,9 @@ node --experimental-strip-types scripts/collect-daily.mjs
 当日成功的目录读取才新增该日 GPU/TPU 观察；同日 id 稳定，历史保留。指数、财政部记录和公告保留真实来源日期，缺失不填零或延续旧值。每日融资披露与固定周榜分列。逐券行情未接入授权来源，CDS 原图及其 2026-10-01 日期固定。
 
 Portal 保存成功后，Portal 与 GitHub Pages 可见页面每 30 秒读取公开快照。无需为每日数据重建或推送静态网页。此工作流提供日常采集执行环境；Portal 仍负责权限、校验、合并及 R2 历史快照保存。
+
+## 自动保活
+
+独立 `maintain-schedule` job 每日检查，每 20 天通过 GitHub API 更新 `.github/schedule-heartbeat.json`，产生真实仓库活动，避免公开仓库连续 60 天无活动导致定时任务停用。该步骤不依赖采集成功，也不获取 Portal 密钥。仅保活 job 使用临时 `GITHUB_TOKEN` 的 `contents: write` 权限；脚本固定仓库、主分支与文件路径，并带当前文件 SHA 校验，不覆盖其他文件、不强制推送。此令牌的提交不触发新工作流。保活记录只表示维护时间，不代表采集成功；暂时失败由次日再次尝试。平台长期故障、账号限制或人工停用仍可能中断运行。
+
+保活测试：`node --test collector/maintenance.test.mjs`。线上运行摘要显示本次是否更新、上次维护时间和下一次到期时间。

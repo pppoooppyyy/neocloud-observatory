@@ -20,6 +20,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  maintain-schedule:
+    # Independent of source failures; an ephemeral token writes one fixed file.
+    if: github.repository == 'pppoooppyyy/neocloud-observatory' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - name: Read maintenance code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify schedule maintenance
+        run: node --test collector/maintenance.test.mjs
+      - name: Maintain repository activity every 20 days
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/maintain-schedule.mjs
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 10
