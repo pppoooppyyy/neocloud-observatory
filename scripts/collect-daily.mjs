@@ -4,8 +4,8 @@ import { collectDaily } from '../collector/daily-collectors.mjs';
 import { concurrentPatch } from '../collector/concurrent-patch.ts';
 import { mergeSnapshot, validatePatch, validateReferences } from '../collector/metrics.ts';
 
-export const SNAPSHOT_URL = 'https://research.castoramoney.com/api/neocloud/public-snapshot';
-export const UPDATE_URL = 'https://research.castoramoney.com/api/neocloud/collector-update';
+export const SNAPSHOT_URL = 'https://neocloud-sync.poppy9654.workers.dev/api/neocloud/public-snapshot';
+export const UPDATE_URL = 'https://neocloud-sync.poppy9654.workers.dev/api/neocloud/collector-update';
 const MAX_BYTES = 4_000_000;
 const PATCH_KEYS = ['sources', 'series', 'quotes', 'deals', 'bonds', 'events', 'treasury', 'history'];
 
