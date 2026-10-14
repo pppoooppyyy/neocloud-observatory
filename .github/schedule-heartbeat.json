@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "purpose": "Keep the daily public-data schedule active through repository activity",
+  "checkedAt": "2026-10-14T09:45:13.692Z",
+  "intervalDays": 20,
+  "workflow": ".github/workflows/neocloud-daily.yml",
+  "runUrl": "https://github.com/pppoooppyyy/neocloud-observatory/actions/runs/38544631613"
+}
