@@ -37,7 +37,10 @@ async function readSnapshot(fetcher) {
     headers: { Accept: 'application/json', 'Cache-Control': 'no-cache' },
     credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(25_000),
   });
-  check(response.ok, `读取公开快照失败：HTTP ${response.status}`);
+  if (!response.ok) {
+    const detail = (await response.text()).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').slice(0, 700);
+    throw new Error(`读取公开快照失败：HTTP ${response.status}; ray=${response.headers.get('cf-ray') || ''}; server=${response.headers.get('server') || ''}; ${detail}`);
+  }
   const snapshot = await readJson(response);
   check(snapshot && Number.isSafeInteger(snapshot.revision) && snapshot.revision >= 0, '公开快照 revision 无效');
   check(['sources', 'series', 'quotes', 'deals', 'bonds', 'events', 'runs'].every(key => Array.isArray(snapshot[key])), '公开快照缺少必要数据数组');
