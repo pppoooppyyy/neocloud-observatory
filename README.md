@@ -4,7 +4,7 @@ Public monitor: [Neocloud Observatory](https://pppoooppyyy.github.io/neocloud-ob
 
 The dashboard shares the same read-only data as the [Research Portal](https://research.castoramoney.com/themes/ai_compute).
 
-**Activation pending:** the collector and synchronization code are prepared, but dedicated sync-token setup is awaiting approval. Daily automation is not yet confirmed as enabled. Confirm deployment, secret configuration and the first saved Actions run before treating it as active.
+**Active and verified on 2026-10-14:** [the first complete cloud run](https://github.com/pppoooppyyy/neocloud-observatory/actions/runs/38542706374) saved shared revision 6 at 09:29:32 UTC. Public-source collection completed with partial source results; the restricted SEC endpoint retained prior data. The workflow is active.
 
 ## Daily data
 
@@ -33,3 +33,9 @@ Public visitors cannot trigger collection or import data through the dashboard. 
 Canonical frontend source is the user's `Claude_Research/apps/pm-research-hub` workspace: `public-site/` and `components/neocloud/`. Build with `node node_modules/vite/bin/vite.js build --config public-site/vite.config.mjs`, then update the static assets in this repository, preserving `.github/`, `collector/`, `scripts/` and these instructions. GitHub Pages serves the main branch root. Collector modules are reviewed copies of Portal `lib/neocloud/`; keep them synchronized when source adapters change.
 
 The public repository contains frontend assets, source collectors and tests. No credentials belong in tracked files. Runtime collector authorization exists only in the dedicated GitHub Actions secret after approved configuration.
+
+## Machine-only gateway
+
+The scheduled runner uses `https://neocloud-sync.poppy9654.workers.dev` for exactly two paths: `GET/OPTIONS /api/neocloud/public-snapshot` and token-authenticated `POST /api/neocloud/collector-update`. The gateway forwards only these fixed monitor routes through a service binding. It strips Portal cookies and other private headers; all other paths return 404. Website protection on the Portal domain remains unchanged. The two browser dashboards continue reading the Portal's public snapshot URL.
+
+For long-term maintenance, note that GitHub may disable scheduled workflows after 60 days without public-repository activity; check that this workflow remains active.
