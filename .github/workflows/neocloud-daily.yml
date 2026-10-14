@@ -1,0 +1,40 @@
+name: Neocloud daily collection
+
+on:
+  schedule:
+    # UTC 02:00 = Asia/Taipei 10:00. GitHub may start scheduled jobs later.
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'collector/**'
+      - 'scripts/**'
+      - '.github/workflows/neocloud-daily.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: neocloud-daily-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Read repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify collector synchronization
+        run: node --experimental-strip-types --test collector/sync.test.mjs
+      - name: Collect public data and synchronize the shared snapshot
+        env:
+          NEOCLOUD_SYNC_TOKEN: ${{ secrets.NEOCLOUD_SYNC_TOKEN }}
+        run: node --experimental-strip-types scripts/collect-daily.mjs

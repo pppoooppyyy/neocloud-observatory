@@ -1,0 +1,62 @@
+export type Row = Record<string, any>;
+export type Source = {
+  id: string;
+  name: string;
+  url: string;
+  kind: string;
+  description?: string;
+  license?: string;
+  attribution?: string;
+};
+export type Point = { date: string; value: number };
+export type IndexSeries = {
+  id: string;
+  provider: string;
+  model: string;
+  label: string;
+  unit: string;
+  region: string;
+  market: string;
+  aggregation: string;
+  sourceId: string;
+  points: Point[];
+  observedAt?: string;
+  note?: string;
+  apiModel?: string;
+};
+export type HistoryPoint = {
+  date: string;
+  value: number | null;
+  sourceId?: string;
+  periodStart?: string;
+  periodEnd?: string;
+  sampleDays?: number;
+  [key: string]: any;
+};
+export type TimeSeries = {
+  id: string;
+  label: string;
+  unit: string;
+  sourceId: string;
+  metric: string;
+  frequency: 'daily' | 'weekly';
+  method: 'observation' | 'effective_price';
+  points: HistoryPoint[];
+  [key: string]: any;
+};
+export type Snapshot = {
+  version: number;
+  revision: number;
+  updatedAt: string;
+  lastAttemptAt?: string;
+  schedule: { time: string; timezone: string; enabled: boolean };
+  sources: Source[];
+  series: IndexSeries[];
+  quotes: Row[];
+  deals: Row[];
+  bonds: Row[];
+  events: Row[];
+  runs: Row[];
+  treasury?: Row[];
+  history?: TimeSeries[];
+};
