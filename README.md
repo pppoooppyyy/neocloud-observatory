@@ -14,7 +14,7 @@ Both dashboards read `https://research.castoramoney.com/api/neocloud/public-snap
 
 Collected: Ornn/Mercatus GPU indices; Google TPU, Runpod, JarvisLabs and Spheron pricing; US Treasury curves; public CoreWeave credit disclosures; public funding releases and complete weekly funding samples. Sources without fresh data retain their real observation dates. Failed requests retain previous values. Daily releases remain separate from fixed weekly samples.
 
-CDS remains the supplied chart dated 2026-10-01. Bond market prices/yields await an authorized source. SEC access may be restricted; the update log reports each source result.
+The credit dashboard now shows the imported FUNDA dataset through 2026-10-14: nine issuers' latest 5Y CDS, 271 plotted history dates with gaps preserved, 30Y Treasury history, capital expenditure, primary bond issuance and credit events. Company and date-range controls replace the old screenshot as the main view; the supplied 2026-10-01 chart remains in a collapsed reference section. FUNDA history records plotted dates, which may include prior-value continuation; it is attributed to FUNDA and is not independently verified against upstream data. This import is not part of automatic daily collection. Bond market prices/yields await an authorized source. SEC access may be restricted; the update log reports each source result.
 
 ## Synchronization and access
 

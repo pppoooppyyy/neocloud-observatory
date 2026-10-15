@@ -103,7 +103,7 @@ function cell(value, token) {
 export async function writeSummary(report, path, token) {
   if (!path) return;
   const rows = report.results.map(row => `| ${cell(row.dataset || '', token)} | ${cell(row.source, token)} | ${cell(row.status, token)} | ${cell(row.latestDate || '', token)} | ${cell(row.detail || '', token)} |`);
-  await appendFile(path, `## Neocloud 每日采集\n\n状态：**${cell(report.status, token)}** · 修订：${report.revision} · 并发重试：${report.retries}\n\n${cell(report.summary, token)}\n\n| 数据组 | 来源 | 结果 | 来源日期 | 说明 |\n| --- | --- | --- | --- | --- |\n${rows.join('\n')}\n\nCDS 原图保留；缺失数据及未接入逐券行情保留原日期。\n`, 'utf8');
+  await appendFile(path, `## Neocloud 每日采集\n\n状态：**${cell(report.status, token)}** · 修订：${report.revision} · 并发重试：${report.retries}\n\n${cell(report.summary, token)}\n\n| 数据组 | 来源 | 结果 | 来源日期 | 说明 |\n| --- | --- | --- | --- | --- |\n${rows.join('\n')}\n\nFUNDA CDS 历史独立保留，本任务不更新 CDS；缺失数据及未接入逐券行情保留原日期。\n`, 'utf8');
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
