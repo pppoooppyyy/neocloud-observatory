@@ -1,6 +1,6 @@
 # Neocloud 每日公开采集
 
-GitHub Actions 每天 UTC 02:00（台北 10:00）运行，也可在 Actions 页手动运行；GitHub 定时任务可能延迟启动。主分支修改 `collector/**`、`scripts/**` 或本工作流会触发一次检查。单次最多 10 分钟，统一并发组排队，避免两次采集同时写入。
+GitHub Actions 每天 UTC 08:00（台北 16:00）开始运行，也可在 Actions 页手动运行；GitHub 定时任务可能延迟启动。主分支修改 `collector/**`、`scripts/**` 或本工作流会触发一次检查。单次最多 10 分钟，统一并发组排队，避免两次采集同时写入。
 
 ## 配置
 

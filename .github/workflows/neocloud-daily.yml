@@ -2,8 +2,8 @@ name: Neocloud daily collection
 
 on:
   schedule:
-    # UTC 02:00 = Asia/Taipei 10:00. GitHub may start scheduled jobs later.
-    - cron: '0 2 * * *'
+    # UTC 08:00 = Asia/Taipei 16:00. GitHub may start scheduled jobs later.
+    - cron: '0 8 * * *'
   workflow_dispatch:
   push:
     branches: [main]
