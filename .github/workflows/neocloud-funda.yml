@@ -1,0 +1,39 @@
+name: Neocloud FUNDA browser capture
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'collector/funda-capture.json'
+      - 'scripts/collect-funda.mjs'
+      - 'collector/funda-sync.test.mjs'
+      - '.github/workflows/neocloud-funda.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: neocloud-daily-collection
+  cancel-in-progress: false
+
+jobs:
+  sync-funda:
+    if: github.repository == 'pppoooppyyy/neocloud-observatory' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify FUNDA capture synchronization
+        run: node --test collector/funda-sync.test.mjs
+      - name: Submit the local browser capture
+        env:
+          NEOCLOUD_SYNC_TOKEN: ${{ secrets.NEOCLOUD_SYNC_TOKEN }}
+        run: node scripts/collect-funda.mjs

@@ -11,6 +11,10 @@ on:
       - 'collector/**'
       - 'scripts/**'
       - '.github/workflows/neocloud-daily.yml'
+      - '!collector/funda-capture.json'
+      - '!collector/funda-sync.test.mjs'
+      - '!scripts/collect-funda.mjs'
+      - '!.github/workflows/neocloud-funda.yml'
 
 permissions:
   contents: read
