@@ -1,0 +1,1100 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "source_url": "https://funda.ai/zh/play/cds?ref=chat_catalog",
+    "page_title": "AI资本开支信用违约互换监测（CDS）",
+    "source_as_of": "2026-10-14",
+    "source_generated_at": "2026-10-15 06:09",
+    "source_generated_timezone": null,
+    "extracted_at": "2026-10-16T02:15:21.714Z",
+    "verification_status": "FUNDA页面显示值；未逐项独立核对上游原始数据",
+    "history_precision_bp": 0.1,
+    "history_date_semantics": "旧归档保留原绘图日期；本次增量仅包含最新报价表的真实 observation_date，未补齐缺失日期。",
+    "history_per_point_quote_source": null,
+    "history_per_point_is_forward_filled": null
+  },
+  "issuers": [
+    {
+      "issuer": "CRWV",
+      "english_name": "CoreWeave",
+      "chinese_name": "CoreWeave",
+      "coupon_bp": 500
+    },
+    {
+      "issuer": "ORCL",
+      "english_name": "Oracle",
+      "chinese_name": "甲骨文",
+      "coupon_bp": 100
+    },
+    {
+      "issuer": "SPACEX",
+      "english_name": "SpaceX",
+      "chinese_name": "SpaceX",
+      "coupon_bp": 100
+    },
+    {
+      "issuer": "AVGO",
+      "english_name": "Broadcom",
+      "chinese_name": "博通",
+      "coupon_bp": 100
+    },
+    {
+      "issuer": "META",
+      "english_name": "Meta",
+      "chinese_name": "Meta",
+      "coupon_bp": 100
+    },
+    {
+      "issuer": "NVDA",
+      "english_name": "Nvidia",
+      "chinese_name": "英伟达",
+      "coupon_bp": 100
+    },
+    {
+      "issuer": "AMZN",
+      "english_name": "Amazon",
+      "chinese_name": "亚马逊",
+      "coupon_bp": 100
+    },
+    {
+      "issuer": "GOOGL",
+      "english_name": "Google",
+      "chinese_name": "谷歌",
+      "coupon_bp": 100
+    },
+    {
+      "issuer": "MSFT",
+      "english_name": "Microsoft",
+      "chinese_name": "微软",
+      "coupon_bp": 100
+    }
+  ],
+  "cds_latest": [
+    {
+      "issuer": "CRWV",
+      "issuer_name": "CoreWeave",
+      "spread_bp": 1099.8,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 325.9,
+      "coupon_bp": 500,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.611,
+        "rn_5y_probability_recovery25": 0.53,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.18899999999999997,
+        "annual_protection_cost_per_usd10m_in_usd10k": 110,
+        "implied_5y_funding_cost": 0.16,
+        "pricing_analogy_label": "危困",
+        "liquidity_label": "成交一般"
+      }
+    },
+    {
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "spread_bp": 285.6,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 96.7,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.21600000000000003,
+        "rn_5y_probability_recovery25": 0.177,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.049,
+        "annual_protection_cost_per_usd10m_in_usd10k": 28.6,
+        "implied_5y_funding_cost": 0.0786,
+        "pricing_analogy_label": "高收益",
+        "liquidity_label": "成交活跃"
+      }
+    },
+    {
+      "issuer": "SPACEX",
+      "issuer_name": "SpaceX",
+      "spread_bp": 200.7,
+      "observation_date": "2026-10-13",
+      "quote_source_label": "upfront 折算",
+      "change_30d_bp": 52.6,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.157,
+        "rn_5y_probability_recovery25": 0.128,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.034,
+        "annual_protection_cost_per_usd10m_in_usd10k": 20.1,
+        "implied_5y_funding_cost": 0.0701,
+        "pricing_analogy_label": "跨界（投资级/高收益边界）",
+        "liquidity_label": "成交一般"
+      }
+    },
+    {
+      "issuer": "AVGO",
+      "issuer_name": "博通",
+      "spread_bp": 144,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 35.2,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.11599999999999999,
+        "rn_5y_probability_recovery25": 0.094,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.025,
+        "annual_protection_cost_per_usd10m_in_usd10k": 14.4,
+        "implied_5y_funding_cost": 0.0644,
+        "pricing_analogy_label": "跨界（投资级/高收益边界）",
+        "liquidity_label": "成交一般"
+      }
+    },
+    {
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "spread_bp": 106.1,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 20,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.087,
+        "rn_5y_probability_recovery25": 0.07,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.018000000000000002,
+        "annual_protection_cost_per_usd10m_in_usd10k": 10.6,
+        "implied_5y_funding_cost": 0.060599999999999994,
+        "pricing_analogy_label": "BBB 邻域",
+        "liquidity_label": "成交一般"
+      }
+    },
+    {
+      "issuer": "NVDA",
+      "issuer_name": "英伟达",
+      "spread_bp": 92.1,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 12.4,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.076,
+        "rn_5y_probability_recovery25": 0.061,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.016,
+        "annual_protection_cost_per_usd10m_in_usd10k": 9.2,
+        "implied_5y_funding_cost": 0.0592,
+        "pricing_analogy_label": "BBB 邻域",
+        "liquidity_label": "成交一般"
+      }
+    },
+    {
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "spread_bp": 76.4,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 10.2,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.063,
+        "rn_5y_probability_recovery25": 0.051,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.013000000000000001,
+        "annual_protection_cost_per_usd10m_in_usd10k": 7.6,
+        "implied_5y_funding_cost": 0.0576,
+        "pricing_analogy_label": "BBB 邻域",
+        "liquidity_label": "成交一般"
+      }
+    },
+    {
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "spread_bp": 75.5,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 10.7,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.062,
+        "rn_5y_probability_recovery25": 0.05,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.013000000000000001,
+        "annual_protection_cost_per_usd10m_in_usd10k": 7.5,
+        "implied_5y_funding_cost": 0.0575,
+        "pricing_analogy_label": "BBB 邻域",
+        "liquidity_label": "成交一般"
+      }
+    },
+    {
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "spread_bp": 53.3,
+      "observation_date": "2026-10-14",
+      "quote_source_label": "ICE 结算价",
+      "change_30d_bp": 5.2,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "avg_daily_trades_20d": null,
+      "verification_status": "FUNDA-reported; not independently verified",
+      "model": {
+        "rn_5y_probability_recovery40": 0.044000000000000004,
+        "rn_5y_probability_recovery25": 0.036000000000000004,
+        "rn_1y_probability_recovery40": null,
+        "annual_hazard_rate": 0.009000000000000001,
+        "annual_protection_cost_per_usd10m_in_usd10k": 5.3,
+        "implied_5y_funding_cost": 0.0553,
+        "pricing_analogy_label": "强投资级",
+        "liquidity_label": "成交一般"
+      }
+    }
+  ],
+  "cds_history": [
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "CRWV",
+      "issuer_name": "CoreWeave",
+      "spread_bp": 1099.8,
+      "coupon_bp": 500,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "spread_bp": 285.6,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-13",
+      "issuer": "SPACEX",
+      "issuer_name": "SpaceX",
+      "spread_bp": 200.7,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-13",
+      "quote_source": "upfront 折算",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "AVGO",
+      "issuer_name": "博通",
+      "spread_bp": 144,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "spread_bp": 106.1,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "NVDA",
+      "issuer_name": "英伟达",
+      "spread_bp": 92.1,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "spread_bp": 76.4,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "spread_bp": 75.5,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    },
+    {
+      "plot_date": "2026-10-14",
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "spread_bp": 53.3,
+      "coupon_bp": 100,
+      "tenor_years": 5,
+      "seniority": "senior_unsecured",
+      "display_status": "displayed",
+      "observation_date": "2026-10-14",
+      "quote_source": "ICE 结算价",
+      "is_forward_filled": false
+    }
+  ],
+  "treasury_30y_history": [
+    {
+      "plot_date": "2026-08-18",
+      "yield_fraction": 0.0528,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-19",
+      "yield_fraction": 0.0519,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-20",
+      "yield_fraction": 0.052300000000000006,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-21",
+      "yield_fraction": 0.0527,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-24",
+      "yield_fraction": 0.052300000000000006,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-25",
+      "yield_fraction": 0.051699999999999996,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-26",
+      "yield_fraction": 0.0518,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-27",
+      "yield_fraction": 0.0519,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-28",
+      "yield_fraction": 0.052199999999999996,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-08-31",
+      "yield_fraction": 0.0525,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-01",
+      "yield_fraction": 0.0527,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-02",
+      "yield_fraction": 0.0527,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-03",
+      "yield_fraction": 0.0525,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-04",
+      "yield_fraction": 0.0524,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-08",
+      "yield_fraction": 0.0525,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-09",
+      "yield_fraction": 0.0528,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-10",
+      "yield_fraction": 0.0537,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-11",
+      "yield_fraction": 0.0535,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-14",
+      "yield_fraction": 0.053399999999999996,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-15",
+      "yield_fraction": 0.0536,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-16",
+      "yield_fraction": 0.0535,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-17",
+      "yield_fraction": 0.0529,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-18",
+      "yield_fraction": 0.053399999999999996,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-21",
+      "yield_fraction": 0.0529,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-22",
+      "yield_fraction": 0.0529,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-23",
+      "yield_fraction": 0.054000000000000006,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-24",
+      "yield_fraction": 0.0547,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-25",
+      "yield_fraction": 0.054900000000000004,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-28",
+      "yield_fraction": 0.0556,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-29",
+      "yield_fraction": 0.0559,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-09-30",
+      "yield_fraction": 0.0564,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-01",
+      "yield_fraction": 0.056100000000000004,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-02",
+      "yield_fraction": 0.056299999999999996,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-05",
+      "yield_fraction": 0.056600000000000004,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-06",
+      "yield_fraction": 0.0564,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-07",
+      "yield_fraction": 0.0567,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-08",
+      "yield_fraction": 0.055999999999999994,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-09",
+      "yield_fraction": 0.055999999999999994,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-13",
+      "yield_fraction": 0.0556,
+      "tenor_years": 30
+    },
+    {
+      "plot_date": "2026-10-14",
+      "yield_fraction": 0.0552,
+      "tenor_years": 30
+    }
+  ],
+  "capex": [
+    {
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "year": 2021,
+      "source_period_label": "2021",
+      "capex_usd_100m": 610.5,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "year": 2022,
+      "source_period_label": "2022",
+      "capex_usd_100m": 636.5,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "year": 2023,
+      "source_period_label": "2023",
+      "capex_usd_100m": 527.3,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "year": 2024,
+      "source_period_label": "2024",
+      "capex_usd_100m": 830,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "year": 2025,
+      "source_period_label": "2025",
+      "capex_usd_100m": 1318.2,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "AMZN",
+      "issuer_name": "亚马逊",
+      "year": 2026,
+      "source_period_label": "2026E",
+      "capex_usd_100m": 2200,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source forecast / guidance"
+    },
+    {
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "year": 2021,
+      "source_period_label": "2021",
+      "capex_usd_100m": 246.4,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "year": 2022,
+      "source_period_label": "2022",
+      "capex_usd_100m": 314.9,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "year": 2023,
+      "source_period_label": "2023",
+      "capex_usd_100m": 322.5,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "year": 2024,
+      "source_period_label": "2024",
+      "capex_usd_100m": 525.4,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "year": 2025,
+      "source_period_label": "2025",
+      "capex_usd_100m": 914.5,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "GOOGL",
+      "issuer_name": "谷歌",
+      "year": 2026,
+      "source_period_label": "2026E",
+      "capex_usd_100m": 2000,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source forecast / guidance"
+    },
+    {
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "year": 2021,
+      "source_period_label": "2021",
+      "capex_usd_100m": 185.7,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "year": 2022,
+      "source_period_label": "2022",
+      "capex_usd_100m": 314.3,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "year": 2023,
+      "source_period_label": "2023",
+      "capex_usd_100m": 272.7,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "year": 2024,
+      "source_period_label": "2024",
+      "capex_usd_100m": 372.6,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "year": 2025,
+      "source_period_label": "2025",
+      "capex_usd_100m": 696.9,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "META",
+      "issuer_name": "Meta",
+      "year": 2026,
+      "source_period_label": "2026E",
+      "capex_usd_100m": 1375,
+      "period_basis": "calendar year",
+      "actual_forecast_status": "source forecast / guidance"
+    },
+    {
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "year": 2021,
+      "source_period_label": "2021",
+      "capex_usd_100m": 206.2,
+      "period_basis": "fiscal year ending June 30",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "year": 2022,
+      "source_period_label": "2022",
+      "capex_usd_100m": 238.9,
+      "period_basis": "fiscal year ending June 30",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "year": 2023,
+      "source_period_label": "2023",
+      "capex_usd_100m": 281.1,
+      "period_basis": "fiscal year ending June 30",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "year": 2024,
+      "source_period_label": "2024",
+      "capex_usd_100m": 444.8,
+      "period_basis": "fiscal year ending June 30",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "year": 2025,
+      "source_period_label": "2025",
+      "capex_usd_100m": 645.5,
+      "period_basis": "fiscal year ending June 30",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "MSFT",
+      "issuer_name": "微软",
+      "year": 2026,
+      "source_period_label": "2026E",
+      "capex_usd_100m": 1159.5,
+      "period_basis": "fiscal year ending June 30",
+      "actual_forecast_status": "ambiguous: table 2026E; previously archived methodology says FY2026 actual"
+    },
+    {
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "year": 2021,
+      "source_period_label": "2021",
+      "capex_usd_100m": 21.4,
+      "period_basis": "fiscal year ending May 31",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "year": 2022,
+      "source_period_label": "2022",
+      "capex_usd_100m": 45.1,
+      "period_basis": "fiscal year ending May 31",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "year": 2023,
+      "source_period_label": "2023",
+      "capex_usd_100m": 87,
+      "period_basis": "fiscal year ending May 31",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "year": 2024,
+      "source_period_label": "2024",
+      "capex_usd_100m": 68.7,
+      "period_basis": "fiscal year ending May 31",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "year": 2025,
+      "source_period_label": "2025",
+      "capex_usd_100m": 212.2,
+      "period_basis": "fiscal year ending May 31",
+      "actual_forecast_status": "source historical"
+    },
+    {
+      "issuer": "ORCL",
+      "issuer_name": "甲骨文",
+      "year": 2026,
+      "source_period_label": "2026E",
+      "capex_usd_100m": 556.6,
+      "period_basis": "fiscal year ending May 31",
+      "actual_forecast_status": "ambiguous: table 2026E; previously archived methodology says FY2026 actual"
+    }
+  ],
+  "capex_aggregate_yoy": [
+    {
+      "source_period_label": "2021",
+      "aggregate_yoy": null
+    },
+    {
+      "source_period_label": "2022",
+      "aggregate_yoy": 0.22
+    },
+    {
+      "source_period_label": "2023",
+      "aggregate_yoy": -0.038
+    },
+    {
+      "source_period_label": "2024",
+      "aggregate_yoy": 0.504
+    },
+    {
+      "source_period_label": "2025",
+      "aggregate_yoy": 0.69
+    },
+    {
+      "source_period_label": "2026E",
+      "aggregate_yoy": 0.925
+    }
+  ],
+  "bond_issues": [
+    {
+      "issuer_name": "甲骨文 Oracle",
+      "pricing_date": "2025-01-30",
+      "coupon": 0.055,
+      "yield": 0.055,
+      "spread_bp": 97,
+      "size_usd_m": 1750,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "Alphabet",
+      "pricing_date": "2025-04-28",
+      "coupon": 0.045,
+      "yield": 0.046799999999999994,
+      "spread_bp": 47,
+      "size_usd_m": 1250,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "博通 Broadcom",
+      "pricing_date": "2025-07-07",
+      "coupon": 0.052000000000000005,
+      "yield": 0.0525,
+      "spread_bp": 85,
+      "size_usd_m": 2500,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "博通 Broadcom",
+      "pricing_date": "2025-09-22",
+      "coupon": 0.048,
+      "yield": 0.0483,
+      "spread_bp": 68,
+      "size_usd_m": 2250,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "甲骨文 Oracle",
+      "pricing_date": "2025-09-24",
+      "coupon": 0.052000000000000005,
+      "yield": 0.052000000000000005,
+      "spread_bp": 105,
+      "size_usd_m": 4000,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "Meta",
+      "pricing_date": "2025-10-30",
+      "coupon": 0.04875,
+      "yield": 0.048799999999999996,
+      "spread_bp": 78,
+      "size_usd_m": 6500,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "Alphabet",
+      "pricing_date": "2025-11-03",
+      "coupon": 0.047,
+      "yield": 0.0472,
+      "spread_bp": 62,
+      "size_usd_m": 3500,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "亚马逊 Amazon",
+      "pricing_date": "2025-11-17",
+      "coupon": 0.04650000000000001,
+      "yield": 0.046799999999999994,
+      "spread_bp": 55,
+      "size_usd_m": 3500,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "博通 Broadcom",
+      "pricing_date": "2026-01-06",
+      "coupon": 0.0495,
+      "yield": 0.0496,
+      "spread_bp": 78,
+      "size_usd_m": 1250,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "甲骨文 Oracle",
+      "pricing_date": "2026-02-02",
+      "coupon": 0.057,
+      "yield": 0.057300000000000004,
+      "spread_bp": 145,
+      "size_usd_m": 5000,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "Alphabet",
+      "pricing_date": "2026-02-09",
+      "coupon": 0.048,
+      "yield": 0.0483,
+      "spread_bp": 63,
+      "size_usd_m": 4250,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "亚马逊 Amazon",
+      "pricing_date": "2026-03-10",
+      "coupon": 0.04875,
+      "yield": 0.049,
+      "spread_bp": 75,
+      "size_usd_m": 6000,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "Salesforce",
+      "pricing_date": "2026-03-11",
+      "coupon": 0.0555,
+      "yield": 0.0555,
+      "spread_bp": 135,
+      "size_usd_m": 4500,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "Meta",
+      "pricing_date": "2026-04-30",
+      "coupon": 0.0525,
+      "yield": 0.0529,
+      "spread_bp": 90,
+      "size_usd_m": 6000,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "英伟达 NVIDIA",
+      "pricing_date": "2026-06-15",
+      "coupon": 0.0495,
+      "yield": 0.049699999999999994,
+      "spread_bp": 50,
+      "size_usd_m": 4000,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "SpaceX",
+      "pricing_date": "2026-06-23",
+      "coupon": 0.05875,
+      "yield": null,
+      "spread_bp": 140,
+      "size_usd_m": 6000,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "Media-reported T+140bp; not SEC FWP",
+      "yield_disclosed": false
+    },
+    {
+      "issuer_name": "亚马逊 Amazon",
+      "pricing_date": "2026-07-07",
+      "coupon": 0.053,
+      "yield": 0.053399999999999996,
+      "spread_bp": 80,
+      "size_usd_m": 4500,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    },
+    {
+      "issuer_name": "Alphabet",
+      "pricing_date": "2026-08-06",
+      "coupon": 0.0545,
+      "yield": 0.0552,
+      "spread_bp": 85,
+      "size_usd_m": 4500,
+      "tenor_basis": "10Y tranche",
+      "spread_basis": "FUNDA attributes to SEC FWP Spread to Benchmark Treasury",
+      "yield_disclosed": true
+    }
+  ]
+}
