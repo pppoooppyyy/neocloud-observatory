@@ -1,5 +1,7 @@
 # Neocloud 每日公开采集
 
+2026-10-23 新增 [Nebius 官方实时 Spot](https://nebius.com/spot-prices)：使用公开免认证 API，按平台/地区采集 USD/GPU-hour。首批 12 条序列、9 地区，覆盖 H100/H200/B200/B300/RTX PRO 6000。首次或缺日时回填约 30 天小时末价，以每 UTC 日最后一个已结束小时桶末价建历史，00:00 桶归前日；接入后保留每日采集时的现价。10 月 8 日前为固定 PVM 费率，之后为动态 Spot。官网 `from` 起价不作为现价。测试：`node --experimental-strip-types --test collector/nebius.test.mjs`。
+
 GitHub Actions 每天 UTC 08:00（台北 16:00）开始运行，也可在 Actions 页手动运行；GitHub 定时任务可能延迟启动。主分支修改 `collector/**`、`scripts/**` 或本工作流会触发一次检查。单次最多 10 分钟，统一并发组排队，避免两次采集同时写入。
 
 ## 配置

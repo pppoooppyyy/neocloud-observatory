@@ -2,6 +2,7 @@ import { collectIndices } from "./collectors.ts";
 import { collectQuotes } from "./quote-collectors.ts";
 import { collectCredit } from "./credit-collectors.ts";
 import { collectFunding } from "./funding-collectors.ts";
+import { collectNebius } from "./nebius-collectors.ts";
 import { mergeSnapshot, validatePatch, validateReferences } from "./metrics.ts";
 async function collectDaily(old, options = {}) {
   const results = [];
@@ -14,6 +15,7 @@ async function collectDaily(old, options = {}) {
       return { patch: { series: value.series }, results: value.results };
     }],
     ["quotes_tpu", (snapshot) => collectQuotes(snapshot, options)],
+    ["nebius_spot", (snapshot) => collectNebius(snapshot, options)],
     ["credit", (snapshot) => collectCredit(snapshot, options)],
     ["funding", (snapshot) => collectFunding(snapshot, options)]
   ];

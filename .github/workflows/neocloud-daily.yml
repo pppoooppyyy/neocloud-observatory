@@ -59,7 +59,7 @@ jobs:
         with:
           node-version: '22'
       - name: Verify collector synchronization
-        run: node --experimental-strip-types --test collector/sync.test.mjs
+        run: node --experimental-strip-types --test collector/sync.test.mjs collector/nebius.test.mjs
       - name: Collect public data and synchronize the shared snapshot
         env:
           NEOCLOUD_SYNC_TOKEN: ${{ secrets.NEOCLOUD_SYNC_TOKEN }}
