@@ -6,7 +6,7 @@
     "source_as_of": "2026-10-28",
     "source_generated_at": "2026-10-29 07:11",
     "source_generated_timezone": null,
-    "extracted_at": "2026-10-29T07:58:45.285Z",
+    "extracted_at": "2026-10-29T08:32:20.691Z",
     "verification_status": "FUNDA页面显示值；未逐项独立核对上游原始数据",
     "history_precision_bp": 0.1,
     "history_date_semantics": "旧归档保留原绘图日期；本次增量仅包含最新报价表的真实 observation_date，未补齐缺失日期。",
